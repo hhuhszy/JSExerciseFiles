@@ -10,8 +10,9 @@ const myTodos = [
 ]
 
 const filterByisDone = (todos) => {
-   return todos.filter((value,index) => value.isDone == true).map(
+   let res = todos.filter((value,index) => value.isDone == true).map(
         (value,index) => {return value.title;}
-    ) 
+    );
+    return `Your done things are:\n${res}`; 
 };
 console.log(filterByisDone(myTodos));
