@@ -51,7 +51,7 @@ function removeItem() {
     //get ul
     let ul = document.querySelector('#todoList');
     //map the checked todoItem
-    let checkedItems = [];
+    const checkedItems = [];
     for (const item of ul.children) {
         if (item.querySelector(`input[type='checkbox']`).checked) {
             checkedItems.push(item);
