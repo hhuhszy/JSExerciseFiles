@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Simple Todo Application</title>
+    <title>Todo App</title>
 </head>
 <body>
+    <div id="container">
+        <div id="control">
+            <h1>My Awesome Todo Application</h1>
+            <input type="text" id="inputTodo" placeholder="Type here..."><br>
+            <button id="btnAdd">Add Todo</button><br>
+            <button id="btnRemove">Remove Done Todo</button>
+        </div>
+        <ul id="todoList">
+            <li class="todoItemSample"><input type="checkbox" id="check2"><label for="check2">Sleep zzz~~</label></li>
+            <li class="todoItemSample"><input type="checkbox" id="check1"><label for="check1">Drink</label></li>
+        </ul>
+    </div>
     <script src="todo.js"></script>
 </body>
 </html>
