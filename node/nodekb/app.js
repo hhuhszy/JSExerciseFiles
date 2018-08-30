@@ -27,6 +27,9 @@ app.use(bodyParser.urlencoded({extended:false}))
 //parse application/json
 app.use(bodyParser.json())
 
+//Set public folder
+app.use(express.static(path.join(__dirname,'public')))
+
 //Load View Engine
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
