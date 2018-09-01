@@ -1,0 +1,13 @@
+<%- include('header') -%>
+    <main class="container" role="main">
+        <h1 class="mt-2">
+            <%= article.title %>
+        </h1>
+        <h5 class="mt-0">
+            Written by <%= article.author %>
+        </h5>
+        <p class="lead"><%= article.body %></p>
+        <a href="/articles/edit/<%= article._id %>" class="btn btn-warning">Edit</a>
+        <a href="#" class="btn btn-danger" id="delete-article" data-id="<%= article._id %>">Delete</a>
+    </main>
+ <%- include('footer') -%>

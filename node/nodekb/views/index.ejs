@@ -1,0 +1,22 @@
+<%- include('header') -%>
+    <main class="container" role="main">
+        <% if(messages) { %>
+            <% for(const msgType in messages) { %>
+                <% for(const infoIndex in messages[msgType]) { %>
+                    <div class="alert alert-<%= msgType %>"><%= messages[msgType][infoIndex] %></div>
+                <% } %>
+            <% } %>
+        <% } %>
+
+        <h1 class="mt-2">
+            <%= title %>
+        </h1>
+        <ul class="list-group list-group-flush">
+            <% articles.forEach((article,i)=>{ %>
+                <li class="list-group-item">
+                    <a href="/article/<%= article._id %>"><%= `${i+1}. ${article.title}` %></a>
+                </li>
+            <% }) %>
+        </ul>
+    </main>
+ <%- include('footer') -%>

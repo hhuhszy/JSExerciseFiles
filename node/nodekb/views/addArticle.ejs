@@ -1,0 +1,27 @@
+<%- include('header') -%>
+    <main class="container" role="main">
+        <% if(typeof errors !== 'undefined') { %> 
+            <% for(const errField in errors) { %>
+                <div class="alert alert-danger"><%= errors[errField].msg%></div>
+            <% } %>
+        <% } %>
+        <h1 class="mt-2">
+            <%= title %>
+        </h1>
+        <form method="POST" action="/articles/add">
+            <div class="form-group">
+                <label >Title:</label>
+                <input type="text" class="form-control" name="title" placeholder="Enter title">
+            </div>
+            <div class="form-group">
+                <label >Author:</label>
+                <input type="text" class="form-control" name="author" placeholder="Enter author">
+            </div>
+            <div class="form-group">
+                <label >Body:</label>
+                <textarea name="body" cols="30" rows="10" class="form-control" placeholder="Write something"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
+    <%- include('footer') -%>

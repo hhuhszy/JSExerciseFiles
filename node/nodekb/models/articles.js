@@ -4,15 +4,15 @@ const mongoose = require('mongoose')
 let articleSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true,
+        required: false,
     },
     author: {
         type: String,
-        required: true,
+        required: false,
     },
     body: {
         type: String,
-        required: true,
+        required: false,
     }
 })
 //create a model which is equivalent to 'document' in mongodb

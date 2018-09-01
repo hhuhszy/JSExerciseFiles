@@ -1,6 +1,0 @@
-extends layout
-block content1
-    h1 #{title}
-    ul
-        each article,index in articles
-            li= `${index}. ${article.title}: ${article.body}`
