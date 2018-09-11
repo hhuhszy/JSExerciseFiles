@@ -1,0 +1,55 @@
+<%- include('header') -%>
+<main class="container" role="main">
+
+    <% if(errors) { %>
+    <% for(const errField in errors) { %>
+    <div class="alert alert-warning">
+        <%= errors[errField].msg%>
+    </div>
+    <% } %>
+    <% } %>
+    <h1 class="mt-2">
+        Register
+    </h1>
+    <form novalidate method="POST" action="/users/register">
+        <div class="form-group">
+            <div class="col-md-4 mb-3">
+                <label for="validationName">Name:</label>
+                <input type="text" class="form-control" id="validationName" name="name" placeholder="Your name" value=""
+                    required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationEmail">Email:</label>
+                <input type="email" class="form-control" id="validationEmail" name="email" placeholder="Accessable email"
+                    value="" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationUsername">Username:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="validationUsername" name="username" placeholder="Set your username"
+                        aria-describedby="inputGroupPrepend" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4 mb-3">
+                <label for="validationPwd">Password:</label>
+                <input type="password" class="form-control" id="validationPwd" name="password" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationConfirmPwd">Confirm Password:</label>
+                <input type="password" class="form-control" id="validationConfirmPw" name="password2" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">
+                <button class="btn btn-primary " type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</main>
+
+<%- include('footer') -%>

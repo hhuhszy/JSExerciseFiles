@@ -1,0 +1,43 @@
+<%- include('header') -%>
+    <main class="container" role="main">
+            <% if(messages) { %>
+                <% for(const msgType in messages) { %>
+                    <% for(const infoIndex in messages[msgType]) { %>
+                        <div class="alert alert-<%= msgType %>"><%= messages[msgType][infoIndex] %></div>
+                    <% } %>
+                <% } %>
+            <% } %>
+        <h1 class="mt-2">
+            Login
+        </h1>
+
+        <form novalidate method="POST" action="/users/login">
+            <div class="form-group">
+
+                <div class="col-md-4 mb-3">
+                    <label for="validationUsername">Username:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="validationUsername" name="username" placeholder="Set your username" aria-describedby="inputGroupPrepend"
+                            required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4 mb-3">
+                    <label for="validationPwd">Password:</label>
+                    <input type="password" class="form-control" id="validationPwd" name="password" required>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">
+                    <button class="btn btn-primary " type="submit">login</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <%- include('footer') -%>

@@ -14,7 +14,7 @@
         <ul class="list-group list-group-flush">
             <% articles.forEach((article,i)=>{ %>
                 <li class="list-group-item">
-                    <a href="/article/<%= article._id %>"><%= `${i+1}. ${article.title}` %></a>
+                    <a href="/articles/<%= article._id %>"><%= `${i+1}. ${article.title}` %></a>
                 </li>
             <% }) %>
         </ul>

@@ -2,22 +2,34 @@ html {
     position: relative;
     min-height: 100%;
   }
-  body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
-  }
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px; /* Set the fixed height of the footer here */
-    line-height: 60px; /* Vertically center the text there */
-    background-color: #f5f5f5;
-  }
-  body > .container {
-    padding: 60px 15px 0;
-  }
-  
-  .footer > .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.alert-error {       /*for passport message */
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-success_msg { /*for passport message */
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
